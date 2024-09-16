@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prescription Analysis - coPharmacist</title>
+    <link rel="icon" href="{{ url_for('static', filename='healthiai_logo.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="container">
+        <div id="header" class="header">
+            <img src="{{ url_for('static', filename='healthiai_logo.png') }}" alt="coPharmacist Logo">
+            <div class="logo-text">coPharmacist</div>
+        </div>
+
+        <div id="main-content">
+            <h1>Upload Handwritten Prescription</h1>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <label for="mediaUpload">Upload Prescription Image:</label>
+                <input type="file" id="mediaUpload" name="media" accept="image/*" required>
+                <button type="submit">Analyze Prescription</button>
+            </form>
+
+            <div id="results"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('uploadForm').onsubmit = async function(event) {
+            event.preventDefault();
+            const formData = new FormData();
+            formData.append('media', document.getElementById('mediaUpload').files[0]);
+
+            const response = await fetch('/upload_media', {
+                method: 'POST',
+                body: formData
+            });
+
+            const result = await response.json();
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = result.message ? result.message : "Error analyzing the file.";
+        };
+    </script>
+</body>
+</html>
