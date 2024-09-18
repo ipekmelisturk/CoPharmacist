@@ -1,6 +1,6 @@
-# SkinScan AI
+# coPharmacist
 
-SkinScan AI is a revolutionary telemedicine platform that leverages Artificial Intelligence (AI) to provide instant skin condition diagnoses and personalized treatment recommendations. Users can upload images of their skin concerns, and our AI-powered system will analyze the images, and provide diagnosis, treatment options, and connect them with a board-certified dermatologist for further consultation.
+This repository is currently using https://github.com/Zhongheng-Cheng/SkinScan to implement coPharmacist where the proposed application utilizes computer vision and machine learning (ML) techniques to recognize handwritten prescriptions, extract relevant information, and convert it into an electronic prescription.
 
 ## Features
 
