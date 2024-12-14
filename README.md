@@ -2,8 +2,7 @@
 
 This repository is currently using https://github.com/Zhongheng-Cheng/SkinScan to implement coPharmacist where the proposed application utilizes computer vision and machine learning (ML) techniques to recognize handwritten prescriptions, extract relevant information, and convert it into an electronic prescription.
 
-#
-# [Optional] Creating virtual environment
+## [Optional] Creating virtual environment
 python -m venv venv
 source venv/bin/activate
 
