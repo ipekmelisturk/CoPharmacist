@@ -17,9 +17,3 @@ touch .env
 # Run the project
 python app.py
 ```
-
-## Demonstration Video
-
-Here is a link to the demonstration video with voice explanation:
-
-[SkinScan AI demo video - Google Drive](https://drive.google.com/file/d/1qmvLnJVpUX_jPJYlNcXRKaGByzmLq93L/view?usp=sharing)
